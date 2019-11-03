@@ -6,23 +6,13 @@ import List from './components/List';
 
 import Form from './components/Form';
 
-// if (localStorage.news) {
-// 	DEFAULT_NEWS = JSON.parse(localStorage.news);
-// } else {
-// 	DEFAULT_NEWS = [
-// 		{
-// 			id: 1,
-// 			text: 'news1'
-// 		}
-// 	]
-// }
-
-const DEFAULT_NEWS = [
-			{
-			id: 1,
-			text: 'news1'
-			}
+const defaultList = [
+	{
+	id: 1,
+	text: 'news1'
+	}
 ]
+const DEFAULT_NEWS = localStorage.news ? JSON.parse(localStorage.news) : defaultList;
 
 const App = () => {
 	const [listNews, changeListNews] = useState(DEFAULT_NEWS);
